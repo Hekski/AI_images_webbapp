@@ -89,10 +89,12 @@ const CreatePost = () => {
       <section className="max-w-5xl mx-auto mt-4">
          <div>
             <h1 className="font-extrabold text-purple-400 text-4xl">Create</h1>
+            <p className="text-gray-400 text-lg mt-8">
+               Create an AI generated image by adding a prompt and your name, then click "Generate".
+            </p>
          </div>
          <form className="mt-4 flex flex-row mobile:flex-col" onSubmit={handleSubmit}>
             <section className="w-9/12 mr-12 mt-4">
-               <p className="text-gray-400 text-lg">Create images with the DALL-E AI generated images</p>
                <div className="flex flex-col gap-5">
                   <FormField
                      labelName="Your Name"

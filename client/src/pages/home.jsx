@@ -60,7 +60,7 @@ const Home = () => {
          <div>
             <h1 className="font-extrabold text-purple-400 text-4xl">AI images collection</h1>
             <p className="mt-8 text-gray-400 text-lg">
-               Browse this collection of DALL-E AI generated images or make your own using the Create function
+               Browse this collection of AI generated images or make your own using the Create function.
             </p>
          </div>
 
