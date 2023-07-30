@@ -1,6 +1,0 @@
-PORT="8080"
-MONGODB_URL="mongodb+srv://Hinke:VJ6AIbkzyMtD7UfA@cluster0.hi583ci.mongodb.net/?retryWrites=true&w=majority"
-OPENAI_API_KEY="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"
-CLOUDINARY_CLOUD_NAME="dstwud5hy"
-CLOUDINARY_API_KEY="199643523973896"
-CLOUDINARY_API_SECRET="ZswGrR9RCPa-9wn2W4vTy-zoemE"
