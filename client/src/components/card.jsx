@@ -16,13 +16,18 @@ const Card = (post) => {
                   </div>
                   <p className="text-white text-sm">{post.name}</p>
                </div>
-               <button
-                  type="button"
-                  onClick={() => downloadFile(post._id, post.photo)}
-                  className="outline-none bg-transparent border-none"
-               >
-                  <img src={download} alt="download" className="w-6 h-6 object-contain invert" />
-               </button>
+               <section className="flex items-center">
+                  <button type="button" className="p-2 hover:bg-slate-600 rounded-md">
+                     <p className="text-white text-small">X</p>
+                  </button>
+                  <button
+                     type="button"
+                     onClick={() => downloadFile(post._id, post.photo)}
+                     className="p-2 hover:bg-slate-600 rounded-md"
+                  >
+                     <img src={download} alt="download" className="w-6 h-6 object-contain invert" />
+                  </button>
+               </section>
             </div>
          </div>
       </div>
