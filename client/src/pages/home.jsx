@@ -72,7 +72,7 @@ const Home = () => {
             />
          </div>
 
-         <div className="mt-10">
+         <div className="mt-4">
             {loading ? (
                <div className="flex justify-center items-center">
                   <Loader />
@@ -81,7 +81,7 @@ const Home = () => {
                <>
                   {search && (
                      <>
-                        <h2 className="font-base text-primary text-xl, mb-3">
+                        <h2 className="font-base text-primary text-xl mb-3">
                            Search results for <span className="text-primary">"{search}" </span>
                         </h2>
                      </>
