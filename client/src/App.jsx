@@ -22,12 +22,15 @@ const App = () => {
 
    return (
       <BrowserRouter>
-         <header className="w-full flex items-center justify-center bg-background sm:px-8 py-4">
+         <header className="w-full flex flex-col xs:flex-row-reverse items-center justify-between bg-background sm:px-8 py-4">
             <Link to="/">
                <img src={logo} alt="logo" className="w-32 ml-4 object-contain mr-8" />
             </Link>
-            <div className="relative">
-               <div className="absolute z-0 bg-accent-light rounded-full transition-all duration-300" id="slider"></div>
+            <div className="relative mt-4 xs:mt-0">
+               <div
+                  className="absolute z-0 bg-text-lightest rounded-full transition-all duration-300"
+                  id="slider"
+               ></div>
                <Link
                   to="/"
                   className="font-base bg-transparent rounded-xl"
@@ -55,7 +58,7 @@ const App = () => {
             </div>
          </header>
 
-         <main className="mobile:p-8 px-4 py-8 w-full bg-background min-h-[calc(100vh-73px)]">
+         <main className="xs:p-8 px-4 py-2 w-full bg-background min-h-[calc(100vh-73px)]">
             <Routes>
                <Route path="/" element={<Home />} />
                <Route path="/create" element={<CreatePost />} />

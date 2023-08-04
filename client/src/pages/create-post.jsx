@@ -29,6 +29,8 @@ const CreatePost = () => {
                body: JSON.stringify({ prompt: form.prompt }),
             });
 
+            console.log("RES", res);
+
             const data = await res.json();
             setForm({
                ...form,
@@ -89,22 +91,9 @@ const CreatePost = () => {
       <section className="max-w-5xl mx-auto mt-4">
          <div>
             <h1 className="font-extrabold text-text-light text-4xl">Create</h1>
-            <p className="text-text text-xl mt-8">
-               Create an AI generated image by adding a prompt and your name, then click "Generate".
-            </p>
          </div>
-         <form className="mt-4 flex flex-row mobile:flex-col" onSubmit={handleSubmit}>
-            <section className="w-9/12 mr-12 mt-4">
-               <div className="flex flex-col gap-5">
-                  <FormField
-                     labelName="Your Name"
-                     type="text"
-                     name="name"
-                     placeholder="Your name"
-                     value={form.name}
-                     handleChange={handleChange}
-                  />
-               </div>
+         <form className="mt-4 flex flex-col xs:flex-row" onSubmit={handleSubmit}>
+            <section className="w-full mr-10">
                <div className="flex flex-col gap-5">
                   <FormField
                      labelName="Prompt"
@@ -120,15 +109,26 @@ const CreatePost = () => {
                <button
                   type="button"
                   onClick={generateImg}
-                  className="bg-teal-500 flex items-center justify-center w-full mt-8 px-3 py-2 rounded-md h-[47px] text-lg font-semibold text-white hover:bg-teal-400 ease-in-out duration-300"
+                  className="bg-teal-500 flex items-center justify-center w-full mt-4 mb-4 px-3 py-2 rounded-md h-[47px] text-lg font-semibold text-white hover:bg-teal-400 ease-in-out duration-300"
                >
                   {generatingImg ? "Generating..." : "Generate"}
+                  {generated && !generatingImg && " again"}
                </button>
                {generated && !generatingImg && (
                   <div className="ease-in-out duration-300">
-                     <p className="text-gray-400 text-lg mt-4">
+                     <p className="text-text text-lg mt-4 bg-text-lightest rounded-lg p-2">
                         Nice image. Want to share it with the community and add it to the gallery?
                      </p>
+                     <div className="flex flex-col gap-5 mt-4">
+                        <FormField
+                           labelName="Your Name"
+                           type="text"
+                           name="name"
+                           placeholder="Your name"
+                           value={form.name}
+                           handleChange={handleChange}
+                        />
+                     </div>
                      <button
                         type="submit"
                         className="mt-[14px] text-white bg-text-light font-semibold rounded-md text-lg w-full h-[47px] p-3 text-center hover:bg-indigo-400 ease-in-out duration-300"
@@ -138,15 +138,15 @@ const CreatePost = () => {
                   </div>
                )}
             </section>
-            <div className="flex flex-col justify-center mb-8">
-               <div className="relative bg-text-lightest text-accent-light rounded-lg focus:ring-accent-light focus:border-accent p-3 flex justify-center items-center">
+            <div className="flex flex-col justify-center w-full mb-8 ease-in-out duration-300">
+               <div className="relative bg-text-lightest text-accent-light rounded-lg focus:ring-accent-light focus:border-accent p-3 flex justify-center items-center ease-in-out duration-300">
                   {form.photo ? (
                      <img src={form.photo} alt={form.prompt} className="relative z-0 w-full h-full object-contain" />
                   ) : (
                      <img
                         src={preview}
                         alt="preview"
-                        className="relative z-0 w-6/12 h-6/12 opacity-20 fill-secondary object-contain"
+                        className="relative z-0 opacity-20 fill-secondary object-contain"
                      />
                   )}
 

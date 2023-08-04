@@ -3,17 +3,18 @@ import { dice } from "../assets";
 
 const FormField = ({ labelName, type, name, placeholder, value, isSurprice, handleChange, handleSurprice }) => (
    <div>
-      <div className="flex items-center justify-between gap-2 mb-3 mt-3">
-         <label htmlFor={name} className="block text-xl font-semibold text-gray-50">
+      <div className="flex items-center gap-2 mb-3">
+         <label htmlFor={name} className="block text-xl font-semibold text-primary">
             {labelName}
          </label>
          {isSurprice && (
             <button
                type="button"
                onClick={handleSurprice}
-               className="bg-secondary p-2 w-[60px] h-[57px] ml-4 rounded-full text-xl font-bold text-text hover:text-gray-100 hover:bg-accent-light ease-in-out duration-300"
+               className="bg-text-lightest p-1 flex items-center h-8 ml-2 rounded-full text-base pr-4 font-bold text-text hover:bg-accent-light ease-in-out duration-300"
             >
-               <img src={dice} alt="Random prompt" className="w-14 object-contain" />
+               <img src={dice} alt="Random prompt" className="w-10" />
+               Random prompt
             </button>
          )}
       </div>
@@ -22,7 +23,7 @@ const FormField = ({ labelName, type, name, placeholder, value, isSurprice, hand
             type={type}
             id={name}
             name={name}
-            className="block text-lg font-base text-text border bg-gray-100 rounded-full focus:ring-accent p-3 w-full outline-none focus:border-accent"
+            className="block text-lg font-base text-text border bg-text-lightest bg-opacity-20 rounded-full px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
             placeholder={placeholder}
             value={value}
             onChange={handleChange}

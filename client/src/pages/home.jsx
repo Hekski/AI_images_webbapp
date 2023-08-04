@@ -59,17 +59,14 @@ const Home = () => {
       <section className="max-w-5xl mx-auto mt-4">
          <div>
             <h1 className="font-extrabold text-text-light text-4xl">AI images collection</h1>
-            <p className="mt-8 text-primary text-xl">
-               Browse this collection of AI generated images or make your own using the Create function.
-            </p>
          </div>
 
-         <div className="mt-2">
+         <div className="mt-4">
             <FormField
-               labelName={"Search"}
+               labelName={"Search posts"}
                type="text"
                name="text"
-               placeholder="Search posts"
+               placeholder="Search..."
                value={search}
                handleChange={handleSearchPosts}
             />
