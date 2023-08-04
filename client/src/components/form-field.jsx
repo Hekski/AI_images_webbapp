@@ -11,7 +11,7 @@ const FormField = ({ labelName, type, name, placeholder, value, isSurprice, hand
             <button
                type="button"
                onClick={handleSurprice}
-               className="bg-teal-500 p-2 w-[60px] h-[57px] ml-4 rounded-full text-xl font-bold text-black hover:text-gray-100 hover:bg-teal-400 ease-in-out duration-300"
+               className="bg-secondary p-2 w-[60px] h-[57px] ml-4 rounded-full text-xl font-bold text-text hover:text-gray-100 hover:bg-accent-light ease-in-out duration-300"
             >
                <img src={dice} alt="Random prompt" className="w-14 object-contain" />
             </button>
@@ -22,7 +22,7 @@ const FormField = ({ labelName, type, name, placeholder, value, isSurprice, hand
             type={type}
             id={name}
             name={name}
-            className="block text-lg font-base text-gray-900 border bg-gray-100 rounded-full focus:ring-pink-400 p-3 w-full outline-none focus:border-pink-400"
+            className="block text-lg font-base text-text border bg-gray-100 rounded-full focus:ring-accent p-3 w-full outline-none focus:border-accent"
             placeholder={placeholder}
             value={value}
             onChange={handleChange}

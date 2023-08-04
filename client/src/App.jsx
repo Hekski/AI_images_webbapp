@@ -22,19 +22,19 @@ const App = () => {
 
    return (
       <BrowserRouter>
-         <header className="w-full flex items-center justify-center bg-black sm:px-8 py-4 border-b border-b-purple-700">
+         <header className="w-full flex items-center justify-center bg-background sm:px-8 py-4">
             <Link to="/">
                <img src={logo} alt="logo" className="w-32 ml-4 object-contain mr-8" />
             </Link>
             <div className="relative">
-               <div className="absolute z-0 bg-purple-600 rounded-full transition-all duration-300" id="slider"></div>
+               <div className="absolute z-0 bg-accent-light rounded-full transition-all duration-300" id="slider"></div>
                <Link
                   to="/"
                   className="font-base bg-transparent rounded-xl"
                   ref={link1}
                   onClick={() => handleSlider(link1)}
                >
-                  <button className="relative text-gray-100 z-10 px-4 py-2 text-xl font-semibold">Gallery</button>
+                  <button className="relative text-text-light z-10 px-4 py-2 text-xl font-semibold">Gallery</button>
                </Link>
                <Link
                   to="/create"
@@ -42,7 +42,7 @@ const App = () => {
                   ref={link3}
                   onClick={() => handleSlider(link3)}
                >
-                  <button className="relative text-gray-100 z-10 px-4 py-2 text-xl font-semibold">Create</button>
+                  <button className="relative text-text-light z-10 px-4 py-2 text-xl font-semibold">Create</button>
                </Link>
                <Link
                   to="/info"
@@ -50,12 +50,12 @@ const App = () => {
                   ref={link2}
                   onClick={() => handleSlider(link2)}
                >
-                  <button className="relative text-gray-100 z-10 px-4 py-2 text-xl font-semibold">Info</button>
+                  <button className="relative text-text-light z-10 px-4 py-2 text-xl font-semibold">Info</button>
                </Link>
             </div>
          </header>
 
-         <main className="sm:p-8 px-4 py-8 w-full bg-gray-900 min-h-[calc(100vh-73px)]">
+         <main className="mobile:p-8 px-4 py-8 w-full bg-background min-h-[calc(100vh-73px)]">
             <Routes>
                <Route path="/" element={<Home />} />
                <Route path="/create" element={<CreatePost />} />

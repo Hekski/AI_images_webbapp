@@ -3,7 +3,7 @@ import { Loader, Card, FormField } from "../components";
 
 const RenderCards = ({ data, title }) => {
    if (data?.length > 0) return data.map((post) => <Card key={post._id} {...post} />);
-   return <h2 className="font-base uppercase text-pink-400 font-bold text-xl, mt-3">{title}</h2>;
+   return <h2 className="font-base uppercase text-secondary font-bold text-xl, mt-3">{title}</h2>;
 };
 
 const Home = () => {
@@ -58,8 +58,8 @@ const Home = () => {
    return (
       <section className="max-w-5xl mx-auto mt-4">
          <div>
-            <h1 className="font-extrabold text-purple-400 text-4xl">AI images collection</h1>
-            <p className="mt-8 text-gray-400 text-lg">
+            <h1 className="font-extrabold text-text-light text-4xl">AI images collection</h1>
+            <p className="mt-8 text-primary text-xl">
                Browse this collection of AI generated images or make your own using the Create function.
             </p>
          </div>
@@ -84,8 +84,8 @@ const Home = () => {
                <>
                   {search && (
                      <>
-                        <h2 className="font-base text-gray-400 text-xl, mb-3">
-                           Search results for <span className="text-[#a6a6a9]">"{search}" </span>
+                        <h2 className="font-base text-primary text-xl, mb-3">
+                           Search results for <span className="text-primary">"{search}" </span>
                         </h2>
                      </>
                   )}

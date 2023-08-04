@@ -88,8 +88,8 @@ const CreatePost = () => {
    return (
       <section className="max-w-5xl mx-auto mt-4">
          <div>
-            <h1 className="font-extrabold text-purple-400 text-4xl">Create</h1>
-            <p className="text-gray-400 text-lg mt-8">
+            <h1 className="font-extrabold text-text-light text-4xl">Create</h1>
+            <p className="text-text text-xl mt-8">
                Create an AI generated image by adding a prompt and your name, then click "Generate".
             </p>
          </div>
@@ -131,23 +131,22 @@ const CreatePost = () => {
                      </p>
                      <button
                         type="submit"
-                        className="mt-[14px] text-white bg-[#6469ff] font-semibold rounded-md text-lg w-full h-[47px] p-3 text-center hover:bg-indigo-400 ease-in-out duration-300"
+                        className="mt-[14px] text-white bg-text-light font-semibold rounded-md text-lg w-full h-[47px] p-3 text-center hover:bg-indigo-400 ease-in-out duration-300"
                      >
                         {loading ? "Sharing..." : "Share"}
                      </button>
                   </div>
                )}
             </section>
-
             <div className="flex flex-col justify-center mb-8">
-               <div className="relative bg-gray-600 border border-gray-900 text-gray-900 rounded-lg focus:ring-purple-500 focus:border-purple-500 p-3 flex justify-center items-center">
+               <div className="relative bg-text-lightest text-accent-light rounded-lg focus:ring-accent-light focus:border-accent p-3 flex justify-center items-center">
                   {form.photo ? (
                      <img src={form.photo} alt={form.prompt} className="relative z-0 w-full h-full object-contain" />
                   ) : (
                      <img
                         src={preview}
                         alt="preview"
-                        className="relative z-0 w-6/12 h-6/12 opacity-40 object-contain"
+                        className="relative z-0 w-6/12 h-6/12 opacity-20 fill-secondary object-contain"
                      />
                   )}
 
